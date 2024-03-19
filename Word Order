@@ -1,4 +1,4 @@
-<!--- You are given  words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
+/* You are given  words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
 
 Note: Each input line ends with a "\n" character.
 
@@ -21,4 +21,12 @@ On the second line, output the number of occurrences for each distinct word acco
 Explanation
 
 There are  distinct words. Here, "bcdef" appears twice in the input at the first and last positions. The other words appear once each. The order of the first appearances are "bcdef", "abcdefg" and "bcde" which corresponds to the output.
---->
+*/
+
+from collections import Counter
+word = []
+n = int(input())
+word = [input() for x in range(n)]
+print(len(Counter(word).keys()))
+print(*Counter(word).values(), end=" ")
+
